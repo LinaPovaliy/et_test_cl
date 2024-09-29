@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./et_test";
+
+service ThumbnailService {
+  rpc GetThumbnail(GetThumbnailRequest) returns (GetThumbnailResponse);
+}
+
+message GetThumbnailRequest {
+  string id = 1;
+}
+
+message GetThumbnailResponse {
+  bytes image = 1;
+}
